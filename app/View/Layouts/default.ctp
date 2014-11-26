@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Gregori Dalzotto">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Sistema Administrativo - Intense Gym</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,16 +67,22 @@
                     </ul>
                 </li>
             </ul>
+           
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
-                    <li class="active">
-                        <a href="alunos"><i class="fa fa-fw fa-user"></i> Alunos</a>
+                    <li <?php if($this->request->params['controller'] == 'alunos' && $this->request->params['action'] == 'index'){ echo 'class="active"'; } ?>>
+                        <a href="alunos"><i class="fa fa-fw fa-user "></i> Alunos</a>
                     </li>
-                    <li>
-                        <a href="modalidades"><i class="fa fa-fw fa-align-justify"></i> Modalidades</a>
+                    <li <?php if($this->request->params['controller'] == 'alunos' && $this->request->params['action'] == 'add'){ echo 'class="active"'; } ?>>
+                        <a href="aluno-adicionar"><i class="fa fa-fw fa-plus "></i> Adicionar Aluno</a>
                     </li>
-                    
+                    <li <?php if($this->request->params['controller'] == 'modalidades' && $this->request->params['action'] == 'index'){ echo 'class="active"'; } ?>>
+                        <a href="modalidades"><i class="fa fa-fw fa-align-justify "></i> Modalidades</a>
+                    </li>
+                    <li <?php if($this->request->params['controller'] == 'modalidades' && $this->request->params['action'] == 'add'){ echo 'class="active"'; } ?>>
+                        <a href="modalidade-adicionar"><i class="fa fa-fw fa-plus "></i> Adicionar Modalidade</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -90,6 +96,7 @@
                <?php echo $this->Session->flash(); ?>
 
 			  <?php echo $this->fetch('content'); ?>
+                
 
             </div>
             <!-- /.container-fluid -->
