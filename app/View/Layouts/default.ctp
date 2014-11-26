@@ -37,6 +37,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/maskedinput.js"></script>
     <script src="js/maskmoney.js"></script>
+    <!--script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script-->
 
 </head>
 
@@ -54,7 +57,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Intense Gym</a>
+                <a class="navbar-brand" href="#">Intense Gym</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -111,9 +114,7 @@
     
 
     <!-- Morris Charts JavaScript -->
-    <!--script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script-->
+    
     
 
 </body>

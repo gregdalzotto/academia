@@ -5,9 +5,7 @@
                             Edição de Cadastro de Modalidade
                         </h1>
                         <ol class="breadcrumb">
-                            <li>
-                                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
-                            </li>
+                            
                              <li>
                                 <i class="fa fa-table"></i>  <a href="modalidades">Modalidades</a>
                             </li>

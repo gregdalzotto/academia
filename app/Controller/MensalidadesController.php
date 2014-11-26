@@ -23,6 +23,7 @@ class MensalidadesController extends AppController {
 	public function index() {
 		$this->Mensalidade->recursive = 0;
 		$this->set('mensalidades', $this->Paginator->paginate());
+                
 	}
 
 /**

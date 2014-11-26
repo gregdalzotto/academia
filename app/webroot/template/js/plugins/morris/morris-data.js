@@ -6,7 +6,7 @@ $(function() {
     Morris.Area({
         element: 'morris-area-chart',
         data: [{
-            period: '2010 Q1',
+            period: '2014',
             iphone: 2666,
             ipad: null,
             itouch: 2647
@@ -57,8 +57,8 @@ $(function() {
             itouch: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['avencer', 'vencida', 'paga'],
+        labels: ['A Vencer', 'Vencida', 'Paga'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true

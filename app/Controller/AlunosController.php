@@ -22,7 +22,8 @@ class AlunosController extends AppController {
  */
 	public function index() {
 		$this->Aluno->recursive = 0;
-		$this->set('alunos', $this->Paginator->paginate());
+		//$this->set('alunos', $this->Paginator->paginate());
+                $this->set('alunos', $this->Aluno->find('all',array('order'=>'Aluno.nome')));
 	}
 
 /**
@@ -90,14 +91,14 @@ class AlunosController extends AppController {
 			}
 		} else {
 			$options = array('conditions' => array('Aluno.' . $this->Aluno->primaryKey => $id));
+                        //$options = array('order'=>'Mensalidade.data');
 			$this->request->data = $this->Aluno->find('first', $options);
+                        rsort($this->request->data['Mensalidade']);
                         
-                        
+                                           
 		}
                 
-                //$this->loadModel('Mensalidade');
-                 //$this->Mensalidade->findByAlunoId($id);
-                //$recenteMensalidades = $this->Aluno->Mensalidade->findByAlunoId($id); 
+               
 
                 $this->set('aluno',array($this->request->data));
                 //$this->render('add');  
